@@ -1,0 +1,19 @@
+{
+  "name": "worktree-seal",
+  "version": "0.1.0",
+  "description": "Stop coding agents from editing the wrong repository or file paths.",
+  "type": "module",
+  "bin": {
+    "worktree-seal": "bin/worktree-seal.mjs"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "check": "node --check bin/worktree-seal.mjs && node --check src/seal-engine.mjs",
+    "pack": "npm pack --json",
+    "verify": "npm test && npm run check"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
